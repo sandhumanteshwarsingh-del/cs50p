@@ -1,8 +1,7 @@
 #take input from the user
-name = input("What's your name? ")
+name = input("What's your name? ").strip().title()
 
-#remove whitespace from string
-name = name.strip().title()
+first, last = name.split()
 
 #print the name of the user
-print(f"hello, {name}")
+print(f"hello, {first}")
