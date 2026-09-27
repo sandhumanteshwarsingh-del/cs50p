@@ -3,8 +3,7 @@ def main():
     y = square(x)
     print(y)
 
-def square(number):
-    square = number*number
-    return square
+def square(n):
+    return n*n
 
 main()
