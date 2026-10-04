@@ -2,7 +2,7 @@ def main():
     grocery_list = {}
     while True:
         try:
-            item = input("Item: ")
+            item = input("Item: ").lower()
         except EOFError:
             print()
             break
@@ -11,6 +11,8 @@ def main():
                 grocery_list[item]+=1
             else:
                 grocery_list[item] = 1
-    for item in grocery_list:
-        print(f"{grocery_list[item]}: {item}")
+
+    sorted_dict = dict(sorted(grocery_list.items()))
+    for item in sorted_dict:
+        print(f"{sorted_dict[item]}: {item.upper()}")
 main()
